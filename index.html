@@ -5,7 +5,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	
+
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -20,7 +20,7 @@
 			font-family: "Source Sans Pro", Helvetica, sans-serif;
 			font-size: 18px;
 			font-weight: 400;
-			line-height: 1.75em;
+			line-height: 1.4em;
 		}
 
 		h2,
@@ -28,7 +28,7 @@
 		p,
 		ul,
 		blockquote {
-			margin: 0 0 0.8em 0;
+			margin: 0 0 0.5em 0;
 		}
 
 		strong,
@@ -45,26 +45,118 @@
 		}
 
 		#main>section {
-			margin: 2em 0 0 0;
-			padding: 2em 0 0 0;
+			margin: 0.3em 0 0 0;
+			padding: 0.5em 0 0 0;
+		}
+
+		#main>section:first-child {
+			margin-top: 0;
+			padding-top: 0;
 		}
 
 		header.major h2 {
-			font-size: 2em;
+			font-size: 1.8em;
+			margin-bottom: 0.6em;
 		}
 
 		h3+p {
 			color: #727272;
 			position: relative;
-			margin: -0.8em 0 0.5em 0;
-			font-size: 1.1em;
-			line-height: 1.5em;
+			margin: -0.5em 0 0.5em 0;
+			font-size: 1.05em;
+			line-height: 1.4em;
 		}
 
 		li ul {
 			margin: 0;
 		}
 
+		/* Publications styling */
+		.publication-item {
+			margin-bottom: 1em;
+			padding-bottom: 0.8em;
+			border-bottom: 1px solid #e8e8e8;
+		}
+
+		.publication-item:last-child {
+			border-bottom: none;
+		}
+
+		.publication-title {
+			color: #222222;
+			font-weight: 600;
+			font-size: 1.05em;
+			line-height: 1.3em;
+			margin-bottom: 0.25em;
+		}
+
+		.publication-authors {
+			color: #666666;
+			font-size: 0.95em;
+			margin-bottom: 0.2em;
+			line-height: 1.3em;
+		}
+
+		.publication-venue {
+			color: #49bf9d;
+			font-weight: 600;
+			font-size: 0.9em;
+		}
+
+		/* Email icon labels */
+		.icons li a {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5em;
+		}
+
+		.icons li .email-label {
+			font-size: 0.85em;
+			color: #999;
+		}
+
+		/* Reduce sidebar whitespace */
+		#header .inner {
+			padding-bottom: 0;
+		}
+
+		#header #footer {
+			margin-top: 2em;
+		}
+
+		#header #footer .inner {
+			padding-top: 0;
+		}
+
+		/* Reduce main container top padding */
+		#main {
+			padding-top: 2em !important;
+		}
+
+		/* Improve mobile responsiveness */
+		@media screen and (max-width: 980px) {
+			#footer {
+				background: transparent !important;
+				padding: 1em 1.5em 0.5em;
+			}
+
+			#footer .inner {
+				background: transparent !important;
+			}
+
+			.copyright {
+				text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+				color: rgba(255, 255, 255, 0.75);
+			}
+
+			.icons li a {
+				color: rgba(255, 255, 255, 0.75) !important;
+			}
+
+			#main>section:first-child {
+				padding-top: 0.5em;
+			}
+		}
 	</style>
 </head>
 
@@ -72,15 +164,17 @@
 
 	<header id="header">
 		<div class="inner">
-			<a href="#" class="image avatar"><img src="images/avatar_1.jpg" alt="" /></a>
+			<a href="#" class="image avatar"><img src="images/avatar_2.jpeg" alt="" /></a>
 			<h1><strong>LI, Han (李晗)</strong><!--,you can call me Han--></h1>
 		</div>
 		<footer id="footer">
 			<div class="inner">
 				<ul class="icons">
 					<!--<li><a href="https://github.com/HanLi05869" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>-->
-					<li><a href="mailto:hanli06@mail.ustc.edu.cn" target="_blank" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					<li><a href="mailto:hanli06@outlook.com" target="_blank" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="mailto:hanli06@mail.ustc.edu.cn" target="_blank" class="icon solid fa-envelope"><span
+								class="label">Email</span><span class="email-label">(USTC)</span></a></li>
+					<li><a href="mailto:hanli06@outlook.com" target="_blank" class="icon solid fa-envelope"><span
+								class="label">Email</span><span class="email-label">(Outlook)</span></a></li>
 				</ul>
 				<ul class="copyright">
 					<li>&copy; 2023 Han Li</li>
@@ -100,9 +194,20 @@
 			<header class="major">
 				<h2>About Me</h2>
 			</header>
-			<h4>Han Li is pursuing his Master degree in Computer Science at the University of Science and Technology of China (USTC), supervised by Prof. <a href="https://scholar.google.com/citations?hl=zh-CN&user=sm_uYE8AAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Guangzhong Sun</a> and Dr. <a href="https://scholar.google.com/citations?user=l1dUs34AAAAJ&hl=zh-CN&oi=ao" target="_blank" rel="noopener">Jingwei Sun</a>. He received his B.S. in Computer Science and Technology as an <em>Outstanding Graduate</em> from Jilin University (JLU). Han has previously interned at Ctrip Group as a Software Engineer and later at MetaX through the AI Computing and General Computing Library Talent Program.</p>
-	
-			<h4>His current research interests focus on <strong>MLSYS</strong>, including optimizing inference speed for Mixture of Experts (MoE), kernel optimization, model quantization, and efficient serving systems. He has published as first author or co-author in AAAI (CCF A), TSE (CCF A), and TOSEM (CCF A). Driven by an insatiable curiosity, he constantly seeks to expand his knowledge and embrace new challenges.</p>
+			<p>Han Li is pursuing his Master degree in Computer Science at the University of Science and Technology of
+				China (USTC), supervised by Prof. <a
+					href="https://scholar.google.com/citations?hl=zh-CN&user=sm_uYE8AAAAJ&view_op=list_works&sortby=pubdate"
+					target="_blank" rel="noopener">Guangzhong Sun</a> and Dr. <a
+					href="https://scholar.google.com/citations?user=l1dUs34AAAAJ&hl=zh-CN&oi=ao" target="_blank"
+					rel="noopener">Jingwei Sun</a>. He received his B.S. in Computer Science and Technology as an
+				<em>Outstanding Graduate</em> from Jilin University (JLU). Han has previously interned at Ctrip Group as
+				a Software Engineer and later at MetaX through the AI Computing and General Computing Library Talent
+				Program.
+			</p>
+
+			<p>His current research interests focus on <strong>MLSYS</strong>, including optimizing inference speed for
+				Mixture of Experts (MoE), kernel optimization, model quantization, and efficient serving systems. Driven
+				by an insatiable curiosity, he constantly seeks to expand his knowledge and embrace new challenges.</p>
 		</section>
 
 		<section id="Education">
@@ -111,22 +216,55 @@
 			</header>
 
 			<h3>University of Science and Technology of China (Sep 2024 - Present)</h3>
-			<h4><em>Master's Student in Computer Science <a href="https://ada.ustc.edu.cn/main.htm">@Ada</a></em></p>
-	
-			<h3>MetaX (Dec 2023 - May 2024)</h3>
-			<h4><em>AI Computing and General Computing Library Talent Program</em></p>
-	
-			<h3>Ctrip Group (Jul 2023 - Sep 2023)</h3>
-			<h4><em>Software Engineer Intern</em></p>
-	
-			<h3>Jilin University (Sep 2020 – Jun 2024)</h3>
-			<h4><em>B.S. in Computer Science and Technology</em></p>
+			<p><em>Master's Student in Computer Science <a href="https://ada.ustc.edu.cn/main.htm">@Ada</a></em></p>
 
+			<h3>MetaX (Dec 2023 - May 2024)</h3>
+			<p><em>AI Computing and General Computing Library Talent Program</em></p>
+
+			<h3>Ctrip Group (Jul 2023 - Sep 2023)</h3>
+			<p><em>Software Engineer Intern</em></p>
+
+			<h3>Jilin University (Sep 2020 – Jun 2024)</h3>
+			<p><em>B.S. in Computer Science and Technology</em></p>
+
+		</section>
+
+		<section id="Publications">
+			<header class="major">
+				<h2>Selected Publications</h2>
+			</header>
+
+			<div class="publication-item">
+				<div class="publication-title">CommitMoE: Efficient Fallback-Free MoE Inference with Offloading Under
+					GPU Memory Constraints</div>
+				<div class="publication-authors"><strong><u>Han Li</u></strong>, Jingwei Sun, Junqing Lin, Guangzhong
+					Sun</div>
+				<div class="publication-venue">Proceedings of the AAAI Conference on Artificial Intelligence. (AAAI,
+					CCF A)</div>
+			</div>
+
+			<div class="publication-item">
+				<div class="publication-title">Distinguishing GUI Component States for Blind Users using Large Language
+					Models</div>
+				<div class="publication-authors">Mengxi Zhang, Huaxiao Liu, Changhao Du, Tengmei Wang, <strong>Han
+						Li</strong>, Pei Huang, Chunyang Chen</div>
+				<div class="publication-venue">ACM Transactions on Software Engineering and Methodology (TOSEM, CCF A)
+				</div>
+			</div>
+
+			<div class="publication-item">
+				<div class="publication-title">AccessFixer: Enhancing GUI accessibility for low vision users with R-GCN
+					model</div>
+				<div class="publication-authors">Mengxi Zhang, Huaxiao Liu, Chunyang Chen, Guangyong Gao, <strong>Han
+						Li</strong>, Jian Zhao</div>
+				<div class="publication-venue">IEEE Transactions on Software Engineering (TSE, CCF A)</div>
+			</div>
 		</section>
 		<section id="love">
 			<header class="major">
 				<!--<h2>I ♥</h2>-->
-				<h2>I &hearts;</h2>
+				<!--<h2>I &hearts;</h2>-->
+				<h2>Hobbies</h2>
 			</header>
 			<ul>
 				<li>Ping Pong</li>
@@ -134,7 +272,7 @@
 				<!--<li>COC (Clash of Clans)</li>-->
 			</ul>
 		</section>
-		
+
 	</div>
 	<script data-goatcounter="https://han.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 	<!--
@@ -145,12 +283,7 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	-->
-	
+
 </body>
 
 </html>
-
-
-
-
-
